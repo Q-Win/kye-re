@@ -7,6 +7,7 @@ const champ = ( props ) => {
     return (
         <div className="Champ">
             <p >Im {props.name} </p>
+            <p >{props.enemytips} </p>
         </div>
     )
 };
