@@ -23,6 +23,9 @@ toggleChampsHandler = () => {
 
 // BEGIN RENDERING
   render() {
+
+    let champs = null;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -30,13 +33,7 @@ toggleChampsHandler = () => {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <button className="Champ-button" onClick={this.toggleChampsHandler} > Toggle Champs</button>
-        <p className="App-intro">
-          {this.state.champs.map( ( champ) => {
-            return <Champ name={champ.name}
-                    enemytips={champ.enemytips}/>
-          } )}
-
-        </p>
+        {champs}
       </div>
 
     );
@@ -44,3 +41,9 @@ toggleChampsHandler = () => {
 }
 
 export default App;
+
+
+// {this.state.champs.map( ( champ) => {
+//   return <Champ name={champ.name}
+//           enemytips={champ.enemytips}/>
+// } )}
