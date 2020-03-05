@@ -26,6 +26,16 @@ toggleChampsHandler = () => {
 
     let champs = null;
 
+    if ( this.state.showChamps ) {
+      champs = (
+        <div>
+          {this.state.champs.map( ( champ) => {
+            return <Champ name={champ.name}
+                    enemytips={champ.enemytips}/>
+          } )}
+        </div>
+      );}
+
     return (
       <div className="App">
         <header className="App-header">
@@ -41,9 +51,3 @@ toggleChampsHandler = () => {
 }
 
 export default App;
-
-
-// {this.state.champs.map( ( champ) => {
-//   return <Champ name={champ.name}
-//           enemytips={champ.enemytips}/>
-// } )}
