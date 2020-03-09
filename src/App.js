@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import styled from 'styled-components';
 import './App.css';
 import Champ from './Champ/Champ';
+
+const StyledButton = styled.button`
+  background-color: ${props => props.alt ?'red' : 'green'};
+  color: white;
+  font: inherit;
+  border: 1px solid blue;
+  padding: 8px;
+  cursor: pointer;
+  &:hover {
+    background-color: ${props => props.alt ?'salmon' : 'lightgreen'};
+    color: black;
+  }
+`;
+
 
 class App extends Component {
 
@@ -42,7 +57,9 @@ toggleChampsHandler = () => {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <button className="Champ-button" onClick={this.toggleChampsHandler} > Toggle Champs</button>
+        <StyledButton alt={this.state.showChamps} onClick={this.toggleChampsHandler}>
+          Toggle Champs
+        </StyledButton>
         {champs}
       </div>
 
