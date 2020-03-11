@@ -3,19 +3,6 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Person from './Champ/Champ';
 
-const StyledButton = styled.button`
-  background-color: ${props => props.alt ?'red' : 'green'};
-  color: white;
-  font: inherit;
-  border: 1px solid blue;
-  padding: 8px;
-  cursor: pointer;
-  &:hover {
-    background-color: ${props => props.alt ?'salmon' : 'lightgreen'};
-    color: black;
-  }
-`;
-
 
 class App extends Component {
 
@@ -55,9 +42,9 @@ toggleChampsHandler = () => {
         <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <StyledButton alt={this.state.showChamps} onClick={this.toggleChampsHandler}>
+        <button alt={this.state.showChamps} onClick={this.toggleChampsHandler}>
           Toggle Champs
-        </StyledButton>
+        </button>
         {champs}
       </div>
 
