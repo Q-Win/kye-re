@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import './App.css';
-import Champ from './Champ/Champ';
+
+import classes from './App.css';
+import Person from './Champ/Champ';
 
 const StyledButton = styled.button`
   background-color: ${props => props.alt ?'red' : 'green'};
