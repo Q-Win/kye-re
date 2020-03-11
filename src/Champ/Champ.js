@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-import './Champ.css';
+import classes from './Champ.css';
 
 const champ = ( props ) => {
     return (
