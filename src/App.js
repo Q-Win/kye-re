@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import styled from 'styled-components';
 import './App.css';
 import Champ from './Champ/Champ';
@@ -54,7 +53,6 @@ toggleChampsHandler = () => {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <StyledButton alt={this.state.showChamps} onClick={this.toggleChampsHandler}>
