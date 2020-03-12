@@ -4,7 +4,7 @@ import classes from './Champ.css';
 
 const champ = ( props ) => {
     return (
-        <div className="Champ">
+        <div className={classes.Champ}>
             <p >Im {props.name} </p>
             <p >{props.enemytips} </p>
         </div>

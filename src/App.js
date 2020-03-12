@@ -26,6 +26,7 @@ toggleChampsHandler = () => {
   render() {
 
     let champs = null;
+    let btnClass = '';
 
     if ( this.state.showChamps ) {
       champs = (
@@ -35,14 +36,16 @@ toggleChampsHandler = () => {
                     enemytips={champ.enemytips}/>
           } )}
         </div>
-      );}
+      );
+      btnClass = classes.Red;
+    }
 
     return (
-      <div className="App">
+      <div className={classes.App}>
         <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Know Your Enemy</h1>
         </header>
-        <button alt={this.state.showChamps} onClick={this.toggleChampsHandler}>
+        <button className={btnClass} alt={this.state.showChamps} onClick={this.toggleChampsHandler}>
           Toggle Champs
         </button>
         {champs}
