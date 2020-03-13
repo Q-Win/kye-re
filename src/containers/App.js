@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import classes from './App.css';
-import Champ from './Champ/Champ';
+import Champ from '../components/Champ/Champ';
 
 
 class App extends Component {
