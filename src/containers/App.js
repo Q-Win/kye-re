@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import classes from './App.css';
 import Champ from '../components/Champ/Champ';
+import Cockpit from '../components/Cockpit/Cockpit';
 
 
 class App extends Component {
