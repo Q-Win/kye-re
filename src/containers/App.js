@@ -42,15 +42,16 @@ toggleChampsHandler = () => {
     }
 
     return (
+
       <div className={classes.App}>
-        <header className="App-header">
-          <h1 className="App-title">Know Your Enemy</h1>
-        </header>
-        <button className={btnClass} alt={this.state.showChamps} onClick={this.toggleChampsHandler}>
-          Toggle Champs
-        </button>
+        <Cockpit
+          showChamps={this.state.showChamps}
+          champs={this.state.champs}
+          clicked={this.toggleChampsHandler} />
         {champs}
       </div>
+
+
 
     );
   }
