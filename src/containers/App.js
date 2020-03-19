@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import classes from './App.css';
-import Champ from '../components/Champ/Champ';
+import Champs from '../components/Champs/Champs';
 import Cockpit from '../components/Cockpit/Cockpit';
 
 
@@ -30,14 +30,9 @@ toggleChampsHandler = () => {
     let btnClass = '';
 
     if ( this.state.showChamps ) {
-      champs = (
-        <div>
-          {this.state.champs.map( ( champ) => {
-            return <Champ name={champ.name}
-                    enemytips={champ.enemytips}/>
-          } )}
-        </div>
-      );
+      champs =  <Champs
+          champs={this.state.champs}
+          />
       btnClass = classes.Red;
     }
 
