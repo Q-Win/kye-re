@@ -33,7 +33,6 @@ toggleChampsHandler = () => {
       champs =  <Champs
           champs={this.state.champs}
           />
-      btnClass = classes.Red;
     }
 
     return (
