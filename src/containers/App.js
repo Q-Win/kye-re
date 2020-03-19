@@ -19,13 +19,15 @@ class App extends Component {
 
 //FUNCTIONS (METHODS)
 toggleChampsHandler = () => {
+
     const doesShow = this.state.showChamps;
     this.setState( { showChamps: !doesShow } );
+
   }
 
 // BEGIN RENDERING
   render() {
-
+    console.log(this.state.showChamps)
     let champs = null;
 
     if ( this.state.showChamps ) {
