@@ -27,7 +27,6 @@ toggleChampsHandler = () => {
   render() {
 
     let champs = null;
-    let btnClass = '';
 
     if ( this.state.showChamps ) {
       champs =  <Champs
@@ -40,7 +39,6 @@ toggleChampsHandler = () => {
       <div className={classes.App}>
         <Cockpit
           showChamps={this.state.showChamps}
-          champs={this.state.champs}
           clicked={this.toggleChampsHandler} />
         {champs}
       </div>
