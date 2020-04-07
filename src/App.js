@@ -7,13 +7,18 @@ import axios from 'axios';
 class App extends Component {
 
   //STATE
-  state = { champs: [
-    "Annie","Amumu","Zed","Ashe"
-  ]
-
+  state = { champs: []
   }
 
 //FUNCTIONS (METHODS)
+
+componentDidMount () {
+  axios.get( 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion.json' )
+      .then( response => {
+          // this.setState({champs: response.data});
+          console.log( response.data.data );
+      } );
+    }
 
 
 
