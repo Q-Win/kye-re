@@ -1,18 +1,21 @@
 import React from 'react';
 
-import classes from './ChampSelector.css';
+// import classes from './ChampSelector.css';
 
-const champSelector = (props) => (
-  <div>
-    <label>Select list</label>
-    <select id = "myList">
-      <option value = {props.champs[0]}>{props.champs[0]}</option>
-      <option value = {props.champs[0]}>{props.champs[0]}</option>
-      <option value = {props.champs[0]}>{props.champs[0]}</option>
+const champSelector = (props) => {
 
-    </select>
-  </div>
 
-);
+  return(
+    <div>
+      <label>Select A Champion</label>
+        <select id={props.id}>
+          {props.champs.map(champ =>(
+            <option value = {champ}>{champ}</option>
+          ))}
+        </select>
+
+    </div>
+  )
+};
 
 export default champSelector;

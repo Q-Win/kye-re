@@ -7,7 +7,7 @@ class App extends Component {
 
   //STATE
   state = { champs: [
-    "Annie","Amumu","Zed"
+    "Annie","Amumu","Zed","Ashe"
   ]
 
   }
