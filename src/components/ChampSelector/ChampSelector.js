@@ -8,12 +8,11 @@ const champSelector = (props) => {
   return(
     <div>
       <label>Select A Champion</label>
-        <select id={props.id}>
-          {props.champs.map(champ =>(
-            <option value = {champ}>{champ}</option>
-          ))}
-        </select>
-
+      <select id={props.id} >
+        {props.champs.map(champ =>(
+          <option value={champ}>{champ}</option>
+        ))}
+      </select>
     </div>
   )
 };

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import classes from './App.css';
 import Layout from  './hoc/Layout/Layout'
+import axios from 'axios';
 
 class App extends Component {
 

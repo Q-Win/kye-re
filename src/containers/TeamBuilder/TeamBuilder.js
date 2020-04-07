@@ -8,15 +8,16 @@ class TeamBuilder extends Component {
 
 
 
-  test = (champ1) => {
-    console.log(champ1)
+  test = () => {
+    console.log("test")
+
   }
 
   render (){
-    let champ = document.getElementById("champ1");
+
     return(
     <Aux>
-      <form onSubmit={this.test("crap")}>
+      <form onSubmit={this.test}>
         <fieldset>
           <legend>Select Champions</legend>
              <ChampSelector champs={this.props.champs} id="champ1"/>
@@ -25,7 +26,7 @@ class TeamBuilder extends Component {
              <ChampSelector champs={this.props.champs} id="champ4"/>
              <ChampSelector champs={this.props.champs} id="champ5"/>
         </fieldset>
-        <input type="submit" value="Enter" onClick={this.test.bind("np")}/>
+        <input type="submit" value="Enter" />
        </form>
     </Aux>
 
