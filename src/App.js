@@ -15,8 +15,8 @@ class App extends Component {
 componentDidMount () {
   axios.get( 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion.json' )
       .then( response => {
-          // this.setState({champs: response.data});
-          console.log( response.data.data );
+          const champs = Object.keys(response.data.data)
+          this.setState({champs: champs});
       } );
     }
 
