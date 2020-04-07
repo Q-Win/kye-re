@@ -9,7 +9,7 @@ class Layout extends Component {
   render (){
     return(
     <Aux>
-      <TeamBuilder/>
+      <TeamBuilder champs={this.props.champs}/>
     </Aux>
 
   )}

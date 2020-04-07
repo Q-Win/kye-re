@@ -6,7 +6,9 @@ import Layout from  './hoc/Layout/Layout'
 class App extends Component {
 
   //STATE
-  state = {
+  state = { champs: [
+    "Annie","Amumu","Zed"
+  ]
 
   }
 
@@ -21,7 +23,7 @@ class App extends Component {
     return (
       <div className={classes.App}>
         <h1> Know Your Enemy </h1>
-        <Layout>
+        <Layout champs={this.state.champs}>
 
         </Layout>
       </div>
