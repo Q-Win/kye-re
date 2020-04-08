@@ -6,10 +6,14 @@ import TeamBuilder from '../../containers/TeamBuilder/TeamBuilder'
 
 class Layout extends Component {
 
+
   render (){
     return(
     <Aux>
-      <TeamBuilder champs={this.props.champs}/>
+      <TeamBuilder
+        champs={this.props.champs}
+        champSelectorChange={this.props.champSelectorChange}
+      />
     </Aux>
 
   )}

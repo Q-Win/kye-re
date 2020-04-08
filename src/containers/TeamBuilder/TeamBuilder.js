@@ -23,7 +23,7 @@ class TeamBuilder extends Component {
       <form onSubmit={this.test}>
         <fieldset>
           <legend>Select Champions</legend>
-             <ChampSelector champs={this.props.champs} id="champ1" onChange={this.test}/>
+             <ChampSelector champs={this.props.champs} id="champ1" onChange={this.props.champSelectorChange}/>
              <ChampSelector champs={this.props.champs} id="champ2"/>
              <ChampSelector champs={this.props.champs} id="champ3"/>
              <ChampSelector champs={this.props.champs} id="champ4"/>

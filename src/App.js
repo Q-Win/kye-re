@@ -8,6 +8,7 @@ class App extends Component {
 
   //STATE
   state = {
+    champs: [],
     selectedChamps: {
       Champ1: "",
       Champ2: "",
@@ -19,16 +20,17 @@ class App extends Component {
 
 //FUNCTIONS (METHODS)
 
-componentDidMount () {
-  axios.get( 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion.json' )
-      .then( response => {
-          const champs = Object.keys(response.data.data)
-          this.setState({champs: champs});
-      } );
-    }
-champSelectorHandler () {
-  
-}
+  componentDidMount () {
+    axios.get( 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion.json' )
+        .then( response => {
+            const champs = Object.keys(response.data.data)
+            this.setState({champs: champs});
+        } );
+      }
+
+  champSelectorHandler (event) {
+    console.log(event.target.id)
+  }
 
 
 // BEGIN RENDERING
@@ -38,8 +40,9 @@ champSelectorHandler () {
     return (
       <div className={classes.App}>
         <h1> Know Your Enemy </h1>
-        <Layout champs={this.state.champs}>
-
+        <Layout
+          champs={this.state.champs}
+          champSelectorChange={this.champSelectorHandler}>
         </Layout>
       </div>
 
