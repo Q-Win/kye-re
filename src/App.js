@@ -7,16 +7,17 @@ import axios from 'axios';
 class App extends Component {
 
   //STATE
-  state = {
-    champs: [],
-    selectedChamps: {
-      Champ1: "",
-      Champ2: "",
-      Champ3: "",
-      Champ4: "",
-      Champ5: ""
+    state = {
+      champs: [],
+      selectedChamps: {
+        champ1: "",
+        champ2: "",
+        champ3: "",
+        champ4: "",
+        champ5: ""
+      }
     }
-  }
+
 
 //FUNCTIONS (METHODS)
 
@@ -29,7 +30,11 @@ class App extends Component {
       }
 
   champSelectorHandler (event) {
-    console.log(event.target.id)
+    const champId = event.target.id
+    const champName = event.target.value
+    let updatedChamps = {...this.state.selectedChamps}
+    updatedChamps[champId] = champName
+    this.setState({selectedChamps: updatedChamps});
   }
 
 
@@ -42,11 +47,9 @@ class App extends Component {
         <h1> Know Your Enemy </h1>
         <Layout
           champs={this.state.champs}
-          champSelectorChange={this.champSelectorHandler}>
+          champSelectorChange={this.champSelectorHandler.bind(this)}>
         </Layout>
       </div>
-
-
 
     );
   }

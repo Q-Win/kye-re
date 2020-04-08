@@ -6,16 +6,6 @@ import ChampSelector from '../../components/ChampSelector/ChampSelector'
 
 class TeamBuilder extends Component {
 
-  state = {
-    champ1: ""
-  }
-
-
-  test = (e) => {
-    console.log(e.target.id)
-
-  }
-
   render (){
 
     return(
