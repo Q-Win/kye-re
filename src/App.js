@@ -7,7 +7,14 @@ import axios from 'axios';
 class App extends Component {
 
   //STATE
-  state = { champs: []
+  state = {
+    selectedChamps: {
+      Champ1: "",
+      Champ2: "",
+      Champ3: "",
+      Champ4: "",
+      Champ5: ""
+    }
   }
 
 //FUNCTIONS (METHODS)
@@ -19,7 +26,9 @@ componentDidMount () {
           this.setState({champs: champs});
       } );
     }
-
+champSelectorHandler () {
+  
+}
 
 
 // BEGIN RENDERING

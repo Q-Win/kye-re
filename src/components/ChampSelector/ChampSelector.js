@@ -5,10 +5,11 @@ import React from 'react';
 const champSelector = (props) => {
 
 
+
   return(
     <div>
       <label>Select A Champion</label>
-      <select id={props.id} >
+      <select id={props.id} onChange={props.onChange}>
         {props.champs.map(champ =>(
           <option value={champ}>{champ}</option>
         ))}
