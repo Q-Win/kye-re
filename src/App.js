@@ -10,11 +10,11 @@ class App extends Component {
     state = {
       champs: [],
       selectedChamps: {
-        champ1: "",
-        champ2: "",
-        champ3: "",
-        champ4: "",
-        champ5: ""
+        champ1: null,
+        champ2: null,
+        champ3: null,
+        champ4: null,
+        champ5: null
       }
     }
 
