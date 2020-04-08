@@ -13,11 +13,20 @@ class TeamBuilder extends Component {
       <form onSubmit={this.test}>
         <fieldset>
           <legend>Select Champions</legend>
-             <ChampSelector champs={this.props.champs} id="champ1" onChange={this.props.champSelectorChange}/>
-             <ChampSelector champs={this.props.champs} id="champ2"/>
-             <ChampSelector champs={this.props.champs} id="champ3"/>
-             <ChampSelector champs={this.props.champs} id="champ4"/>
-             <ChampSelector champs={this.props.champs} id="champ5"/>
+             <ChampSelector champs={this.props.champs}
+              id="champ1"                                onChange={this.props.champSelectorChange}/>
+             <ChampSelector champs={this.props.champs}
+              id="champ2"
+              onChange={this.props.champSelectorChange}/>
+             <ChampSelector champs={this.props.champs}
+              id="champ3"
+              onChange={this.props.champSelectorChange}/>
+             <ChampSelector champs={this.props.champs}
+              id="champ4"
+              onChange={this.props.champSelectorChange}/>
+             <ChampSelector champs={this.props.champs}
+              id="champ5"
+              onChange={this.props.champSelectorChange}/>
         </fieldset>
         <input type="submit" value="Enter" />
        </form>
