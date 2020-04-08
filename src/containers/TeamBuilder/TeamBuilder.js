@@ -28,8 +28,8 @@ class TeamBuilder extends Component {
               id="champ5"
               onChange={this.props.champSelectorChange}/>
         </fieldset>
-        <input type="submit" value="Enter" />
        </form>
+       <button onClick={this.props.submitClicked}>Submit</button>
     </Aux>
 
   )}

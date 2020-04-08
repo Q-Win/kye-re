@@ -8,6 +8,7 @@ class App extends Component {
 
   //STATE
     state = {
+      atestData: {},
       champs: [],
       selectedChamps: {
         champ1: null,
@@ -24,9 +25,10 @@ class App extends Component {
   componentDidMount () {
     axios.get( 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion.json' )
         .then( response => {
-            const champs = Object.keys(response.data.data)
-            this.setState({champs: champs});
-        } );
+          const champs = Object.keys(response.data.data)
+          this.setState({champs: champs});
+        });
+
       }
 
   champSelectorHandler (event) {
@@ -35,6 +37,20 @@ class App extends Component {
     let updatedChamps = {...this.state.selectedChamps}
     updatedChamps[champId] = champName
     this.setState({selectedChamps: updatedChamps});
+
+    axios.get('http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/Amumu.json')
+      .then( response => {
+          const champData = response.data.data
+          this.setState({atestData: champData});
+        });
+  }
+
+  lookUpChampionData (event){
+    axios.get('http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/Amumu.json')
+      .then( response => {
+          const champData = response.data.data
+          this.setState({atestData: champData});
+        });
   }
 
 
@@ -47,7 +63,8 @@ class App extends Component {
         <h1> Know Your Enemy </h1>
         <Layout
           champs={this.state.champs}
-          champSelectorChange={this.champSelectorHandler.bind(this)}>
+          champSelectorChange={this.champSelectorHandler.bind(this)}
+          teamBuilderSubmit={this.lookUpChampionData.bind(this)}>
         </Layout>
       </div>
 

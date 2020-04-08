@@ -13,6 +13,7 @@ class Layout extends Component {
       <TeamBuilder
         champs={this.props.champs}
         champSelectorChange={this.props.champSelectorChange}
+        submitClicked={this.props.teamBuilderSubmit}
       />
     </Aux>
 
