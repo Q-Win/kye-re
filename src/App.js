@@ -8,7 +8,7 @@ class App extends Component {
 
   //STATE
     state = {
-      atestData: {},
+      showEnemyTeam: false,
       champs: [],
       selectedChamps: {
         champ1: null,
@@ -45,12 +45,17 @@ class App extends Component {
         });
   }
 
-  lookUpChampionData (event){
+  lookUpChampionData (champ){
     axios.get('http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/Amumu.json')
       .then( response => {
           const champData = response.data.data
           this.setState({atestData: champData});
         });
+  }
+
+  submitTeam (){
+    const doesShow = this.state.showEnemyTeam;
+    this.setState({ showEnemyTeam: !doesShow })
   }
 
 
@@ -64,7 +69,8 @@ class App extends Component {
         <Layout
           champs={this.state.champs}
           champSelectorChange={this.champSelectorHandler.bind(this)}
-          teamBuilderSubmit={this.lookUpChampionData.bind(this)}>
+          teamBuilderSubmit={this.submitTeam.bind(this)}>
+          showEnemy={this.showEnemyTeam}
         </Layout>
       </div>
 
