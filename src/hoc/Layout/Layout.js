@@ -13,7 +13,7 @@ class Layout extends Component {
     return(
     <Aux>
       <Modal show={this.props.showEnemy}>
-        
+        <EnemyBuilder/>
       </Modal>
       <TeamBuilder
         champs={this.props.champs}

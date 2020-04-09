@@ -10,7 +10,7 @@ class EnemyBuilder extends Component {
   render (){
     return(
       <Aux>
-        <div><h1>TEST</h1></div>
+        <div><h1>Enemies</h1></div>
       </Aux>
       )}
 }
