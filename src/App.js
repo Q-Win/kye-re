@@ -69,8 +69,8 @@ class App extends Component {
         <Layout
           champs={this.state.champs}
           champSelectorChange={this.champSelectorHandler.bind(this)}
-          teamBuilderSubmit={this.submitTeam.bind(this)}>
-          showEnemy={this.showEnemyTeam}
+          teamBuilderSubmit={this.submitTeam.bind(this)}
+          showEnemy={this.state.showEnemyTeam}>
         </Layout>
       </div>
 
