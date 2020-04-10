@@ -73,6 +73,7 @@ class App extends Component {
     this.setState({selectedChamps: updatedChamps});
 
     const url = 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/'+champName+'.json'
+
     axios.get(url)
       .then( response => {
           // const champName = Object.keys(response.data.data)[0]
@@ -93,8 +94,6 @@ class App extends Component {
           updatedSelectedChamp.cooldownR = cooldownR
 
           this.setState({[champId]: updatedSelectedChamp});
-          // this.setState({champN: updatedChamps});
-          console.log(updatedSelectedChamp)
         });
 
   }
