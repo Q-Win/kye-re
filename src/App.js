@@ -79,6 +79,7 @@ class App extends Component {
           const enemyTip = response.data.data[champName].enemytips
           let updatedSelectedChamp = {...this.state[champId]}
           updatedSelectedChamp.enemytips = enemyTip
+          this.setState({[champId]: updatedSelectedChamp});
           // this.setState({champN: updatedChamps});
           console.log(updatedSelectedChamp)
         });
