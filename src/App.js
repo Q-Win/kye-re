@@ -132,6 +132,11 @@ class App extends Component {
           teamBuilderSubmit={this.submitTeam.bind(this)}
           showEnemy={this.state.showEnemyTeam}
           enemies={this.state.selectedChamps}
+          champ1={this.state.champ1}
+          champ2={this.state.champ2}
+          champ3={this.state.champ3}
+          champ4={this.state.champ4}
+          champ5={this.state.champ5}
         >
         </Layout>
       </div>
