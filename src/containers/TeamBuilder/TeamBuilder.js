@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Aux from '../../hoc/Aux/Aux';
 // import classes from './TeamBuilder.css'
 import ChampSelector from '../../components/ChampSelector/ChampSelector'
+import Champion from '../../components/Champion/Champion'
 
 class TeamBuilder extends Component {
 
@@ -11,7 +12,10 @@ class TeamBuilder extends Component {
 
     const whatWeDisplay = () =>{
       if (this.props.showEnemy) { return(
-         <button onClick={this.props.submitClicked}>Submit</button>
+        <div>
+          <Champion champData = {this.props.champ1}/>
+          <button onClick={this.props.submitClicked}>Submit</button>
+        </div>
        )
      } else { return (
         <form >
