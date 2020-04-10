@@ -14,7 +14,11 @@ class TeamBuilder extends Component {
       if (this.props.showEnemy) { return(
         <div>
           <Champion champData = {this.props.champ1}/>
-          <button onClick={this.props.submitClicked}>Submit</button>
+          <Champion champData = {this.props.champ2}/>
+          <Champion champData = {this.props.champ3}/>
+          <Champion champData = {this.props.champ4}/>
+          <Champion champData = {this.props.champ5}/>
+          <button onClick={this.props.submitClicked}>New Team</button>
         </div>
        )
      } else { return (
