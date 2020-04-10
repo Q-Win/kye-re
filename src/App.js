@@ -77,8 +77,21 @@ class App extends Component {
       .then( response => {
           // const champName = Object.keys(response.data.data)[0]
           const enemyTip = response.data.data[champName].enemytips
+          const cooldownQ = response.data.data[champName].spells[0].cooldown
+          const cooldownE = response.data.data[champName].spells[1].cooldown
+          const cooldownW = response.data.data[champName].spells[2].cooldown
+          const cooldownR = response.data.data[champName].spells[3].cooldown
+
+
           let updatedSelectedChamp = {...this.state[champId]}
+
           updatedSelectedChamp.enemytips = enemyTip
+          updatedSelectedChamp.name = champName
+          updatedSelectedChamp.cooldownQ = cooldownQ
+          updatedSelectedChamp.cooldownW = cooldownW
+          updatedSelectedChamp.cooldownE = cooldownE
+          updatedSelectedChamp.cooldownR = cooldownR
+
           this.setState({[champId]: updatedSelectedChamp});
           // this.setState({champN: updatedChamps});
           console.log(updatedSelectedChamp)
