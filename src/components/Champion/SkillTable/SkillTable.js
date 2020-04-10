@@ -1,10 +1,15 @@
-import React from 'react';
-
-const skillTable = (props) => (
-  <div>
+import React, { Component } from 'react';
 
 
-  </div>
-);
+class SkillTable extends Component {
 
-export default skillTable;
+  render (){
+    return (
+      <table>
+
+
+      </table>
+    )
+  }
+}
+export default SkillTable;
