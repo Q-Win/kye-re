@@ -4,6 +4,7 @@ import Aux from '../../hoc/Aux/Aux';
 // import classes from './TeamBuilder.css'
 import ChampSelector from '../../components/ChampSelector/ChampSelector'
 import Champion from '../../components/Champion/Champion'
+import Modal from '../../components/UI/Modal/Modal'
 
 class TeamBuilder extends Component {
 

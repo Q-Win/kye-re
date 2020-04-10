@@ -19,7 +19,7 @@ class App extends Component {
       },
       champ1: {
         name: "",
-        enemytips: "run",
+        enemytips: "",
         cooldownQ: [],
         cooldownW: [],
         cooldownE: [],
