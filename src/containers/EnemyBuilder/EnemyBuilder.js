@@ -64,14 +64,7 @@ class EnemyBuilder extends Component {
     // this.setState({champ1: "this.props.enemies.champ1"})
   }
 
-  lookUpChampionData (champ){
-    const url = 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/'+champ+'.json'
-    axios.get('http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/Amumu.json')
-      .then( response => {
-          const champData = response.data.data
-          // this.setState({atestData: champData});
-        });
-  }
+
 
 
   render (){

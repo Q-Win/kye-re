@@ -17,10 +17,13 @@ class Layout extends Component {
         champs={this.props.champs}
         champSelectorChange={this.props.champSelectorChange}
         submitClicked={this.props.teamBuilderSubmit}
+        showEnemy={this.props.showEnemy}
+        champ1={this.props.champ1}
+        champ2={this.props.champ2}
+        champ3={this.props.champ3}
+        champ4={this.props.champ4}
+        champ5={this.props.champ5}
       />
-      <Modal show={this.props.showEnemy}>
-        <EnemyBuilder enemies={this.props.enemies}/>
-      </Modal>
     </Aux>
 
   )}
