@@ -11,25 +11,18 @@ class App extends Component {
       showEnemyTeam: false,
       champs: [],
       selectedChamps: {
-        champ1: null,
-        champ2: null,
-        champ3: null,
-        champ4: null,
-        champ5: null
+        champ1: "Aatrox",
+        champ2: "Aatrox",
+        champ3: "Aatrox",
+        champ4: "Aatrox",
+        champ5: "Aatrox"
       }
     }
 
 
 //FUNCTIONS (METHODS)
 
-  componentDidMount () {
-    axios.get( 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion.json' )
-        .then( response => {
-          const champs = Object.keys(response.data.data)
-          this.setState({champs: champs});
-        });
 
-      }
 
   champSelectorHandler (event) {
     const champId = event.target.id
@@ -37,21 +30,9 @@ class App extends Component {
     let updatedChamps = {...this.state.selectedChamps}
     updatedChamps[champId] = champName
     this.setState({selectedChamps: updatedChamps});
-
-    axios.get('http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/Amumu.json')
-      .then( response => {
-          const champData = response.data.data
-          this.setState({atestData: champData});
-        });
   }
 
-  lookUpChampionData (champ){
-    axios.get('http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/Amumu.json')
-      .then( response => {
-          const champData = response.data.data
-          this.setState({atestData: champData});
-        });
-  }
+
 
   submitTeam (){
     const doesShow = this.state.showEnemyTeam;
@@ -62,6 +43,11 @@ class App extends Component {
 // BEGIN RENDERING
   render() {
 
+    axios.get( 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion.json' )
+        .then( response => {
+          let champs = Object.keys(response.data.data)
+          this.setState({champs: champs});
+        });
 
     return (
       <div className={classes.App}>
@@ -70,7 +56,9 @@ class App extends Component {
           champs={this.state.champs}
           champSelectorChange={this.champSelectorHandler.bind(this)}
           teamBuilderSubmit={this.submitTeam.bind(this)}
-          showEnemy={this.state.showEnemyTeam}>
+          showEnemy={this.state.showEnemyTeam}
+          enemies={this.state.selectedChamps}
+        >
         </Layout>
       </div>
 

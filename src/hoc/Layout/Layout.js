@@ -12,14 +12,15 @@ class Layout extends Component {
   render (){
     return(
     <Aux>
-      <Modal show={this.props.showEnemy}>
-        <EnemyBuilder/>
-      </Modal>
+
       <TeamBuilder
         champs={this.props.champs}
         champSelectorChange={this.props.champSelectorChange}
         submitClicked={this.props.teamBuilderSubmit}
       />
+      <Modal show={this.props.showEnemy}>
+        <EnemyBuilder enemies={this.props.enemies}/>
+      </Modal>
     </Aux>
 
   )}

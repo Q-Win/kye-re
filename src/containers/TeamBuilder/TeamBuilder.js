@@ -10,7 +10,7 @@ class TeamBuilder extends Component {
 
     return(
     <Aux>
-      <form onSubmit={this.test}>
+      <form >
         <fieldset>
           <legend>Select Champions</legend>
              <ChampSelector champs={this.props.champs}
