@@ -16,7 +16,48 @@ class App extends Component {
         champ3: "Aatrox",
         champ4: "Aatrox",
         champ5: "Aatrox"
+      },
+      champ1: {
+        name: "",
+        enemytips: "run",
+        cooldownQ: [],
+        cooldownW: [],
+        cooldownE: [],
+        cooldownR: [],
+      },
+      champ2: {
+        name: "",
+        enemytips: "",
+        cooldownQ: [],
+        cooldownW: [],
+        cooldownE: [],
+        cooldownR: [],
+      },
+      champ3: {
+        name: "",
+        enemytips: "",
+        cooldownQ: [],
+        cooldownW: [],
+        cooldownE: [],
+        cooldownR: [],
+      },
+      champ4: {
+        name: "",
+        enemytips: "",
+        cooldownQ: [],
+        cooldownW: [],
+        cooldownE: [],
+        cooldownR: [],
+      },
+      champ5: {
+        name: "",
+        enemytips: "",
+        cooldownQ: [],
+        cooldownW: [],
+        cooldownE: [],
+        cooldownR: [],
       }
+
     }
 
 
@@ -30,8 +71,28 @@ class App extends Component {
     let updatedChamps = {...this.state.selectedChamps}
     updatedChamps[champId] = champName
     this.setState({selectedChamps: updatedChamps});
+
+    const url = 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/'+champName+'.json'
+    axios.get(url)
+      .then( response => {
+          // const champName = Object.keys(response.data.data)[0]
+          const enemyTip = response.data.data[champName].enemytips
+          let updatedSelectedChamp = {...this.state[champId]}
+          updatedSelectedChamp.enemytips = enemyTip
+          // this.setState({champN: updatedChamps});
+          console.log(updatedSelectedChamp)
+        });
+
   }
 
+  lookUpChampionData (champ){
+    const url = 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/'+champ+'.json'
+    axios.get(url)
+      .then( response => {
+          const champData = response.data.data
+          // this.setState({atestData: champData});
+        });
+  }
 
 
   submitTeam (){
