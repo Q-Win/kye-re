@@ -3,7 +3,7 @@ import React from 'react';
 // import classes from './ChampSelector.css';
 
 const champSelector = (props) => {
-
+  
   return(
     <div>
       <label>Select A Champion  </label>
