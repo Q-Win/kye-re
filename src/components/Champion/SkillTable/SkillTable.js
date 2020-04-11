@@ -22,22 +22,22 @@ class SkillTable extends Component {
         </tr>
         <tr>
           {this.props.cooldowns.map(cd =>{
-            return(<td>{cd*.9.toFixed(1)}</td>)
+            return(<td>{(cd*.9).toFixed(1)}</td>)
           })}
         </tr>
         <tr>
           {this.props.cooldowns.map(cd =>{
-            return(<td>{cd*.8.toFixed(1)}</td>)
+            return(<td>{(cd*.8).toFixed(1)}</td>)
           })}
         </tr>
         <tr>
           {this.props.cooldowns.map(cd =>{
-            return(<td>{cd*.7.toFixed(1)}</td>)
+            return(<td>{(cd*.7).toFixed(1)}</td>)
           })}
         </tr>
         <tr>
           {this.props.cooldowns.map(cd =>{
-            return(<td>{cd*.6.toFixed(1)}</td>)
+            return(<td>{(cd*.6).toFixed(1)}</td>)
           })}
         </tr>
       </table>
