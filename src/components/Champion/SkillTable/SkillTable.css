@@ -1,13 +1,21 @@
 .CoolDown {
   height: 50px;
-  vertical-align: bottom;
+  vertical-align: center;
+  border: 1px solid black;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .RowHeader {
-  padding-right: 15px;
+  padding-right: 5px;
 }
 
 th {
   height: 50px;
-  vertical-align: bottom;
+  vertical-align: center;
+  border: 2px solid black;
+}
+
+table {
+  border-collapse: collapse;
 }
