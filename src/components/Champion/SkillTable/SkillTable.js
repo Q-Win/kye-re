@@ -18,33 +18,33 @@ class SkillTable extends Component {
           })}
         </tr>
         <tr>
-          <th>0%</th>
+          <th className={classes.RowHeader}>0%</th>
           {this.props.cooldowns.map(cd =>{
-            return(<td>{cd}</td>)
+            return(<td className={classes.CoolDown}>{cd}</td>)
           })}
         </tr>
         <tr>
-          <th>10%</th>
+          <th className={classes.RowHeader}>10%</th>
           {this.props.cooldowns.map(cd =>{
-            return(<td>{(cd*.9).toFixed(1)}</td>)
+            return(<td className={classes.CoolDown}>{(cd*.9).toFixed(1)}</td>)
           })}
         </tr>
         <tr>
-          <th>20%</th>
+          <th className={classes.RowHeader}>20%</th>
           {this.props.cooldowns.map(cd =>{
-            return(<td>{(cd*.8).toFixed(1)}</td>)
+            return(<td className={classes.CoolDown}>{(cd*.8).toFixed(1)}</td>)
           })}
         </tr>
         <tr>
-          <th>30%</th>
+          <th className={classes.RowHeader}>30%</th>
           {this.props.cooldowns.map(cd =>{
-            return(<td>{(cd*.7).toFixed(1)}</td>)
+            return(<td className={classes.CoolDown}>{(cd*.7).toFixed(1)}</td>)
           })}
         </tr>
         <tr>
-          <th>40%</th>
+          <th className={classes.RowHeader}>40%</th>
           {this.props.cooldowns.map(cd =>{
-            return(<td>{(cd*.6).toFixed(1)}</td>)
+            return(<td className={classes.CoolDown}>{(cd*.6).toFixed(1)}</td>)
           })}
         </tr>
       </table>

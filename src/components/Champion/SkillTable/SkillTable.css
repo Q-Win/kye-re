@@ -1,0 +1,13 @@
+.CoolDown {
+  height: 50px;
+  vertical-align: bottom;
+}
+
+.RowHeader {
+  padding-right: 15px;
+}
+
+th {
+  height: 50px;
+  vertical-align: bottom;
+}
