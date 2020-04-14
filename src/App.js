@@ -111,15 +111,19 @@ class App extends Component {
     this.setState({ showEnemyTeam: !doesShow })
   }
 
-
-// BEGIN RENDERING
-  render() {
-
+  componentDidMount () {
     axios.get( 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion.json' )
         .then( response => {
           let champs = Object.keys(response.data.data)
           this.setState({champs: champs});
         });
+    }
+
+
+// BEGIN RENDERING
+  render() {
+
+
 
     return (
       <div className={classes.App}>
