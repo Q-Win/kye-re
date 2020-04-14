@@ -9,7 +9,7 @@ class App extends Component {
   //STATE
     state = {
       showEnemyTeam: false,
-      champs: ["Aatrox","Amumu","Ashe"],
+      champs: [],
       selectedChamps: {
         champ1: "Aatrox",
         champ2: "Aatrox",
