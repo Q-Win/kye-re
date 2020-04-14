@@ -76,7 +76,6 @@ class App extends Component {
 
     axios.get(url)
       .then( response => {
-          // const champName = Object.keys(response.data.data)[0]
           const enemyTip = response.data.data[champName].enemytips
           const cooldownQ = response.data.data[champName].spells[0].cooldown
           const cooldownE = response.data.data[champName].spells[1].cooldown
@@ -103,7 +102,6 @@ class App extends Component {
     axios.get(url)
       .then( response => {
           const champData = response.data.data
-          // this.setState({atestData: champData});
         });
   }
 
