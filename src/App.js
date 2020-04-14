@@ -72,7 +72,7 @@ class App extends Component {
     updatedChamps[champId] = champName
     this.setState({selectedChamps: updatedChamps});
 
-    const url = 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/'+champName+'.json'
+    const url = 'https://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/'+champName+'.json'
 
     axios.get(url)
       .then( response => {
