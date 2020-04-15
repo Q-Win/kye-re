@@ -5,9 +5,6 @@ import classes from './SkillTable.css';
 class SkillTable extends Component {
 
   render (){
-    let space =  'cat'
-    let tableLength = this.props.cooldowns
-    for (var i = 0; i < tableLength; i++) {i}
 
     return (
       <table>

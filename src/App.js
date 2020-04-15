@@ -17,47 +17,49 @@ class App extends Component {
         champ4: "Aatrox",
         champ5: "Aatrox"
       },
-      champ1: {
-        name: "",
-        enemytips: "",
-        cooldownQ: [],
-        cooldownW: [],
-        cooldownE: [],
-        cooldownR: [],
-      },
-      champ2: {
-        name: "",
-        enemytips: "",
-        cooldownQ: [],
-        cooldownW: [],
-        cooldownE: [],
-        cooldownR: [],
-      },
-      champ3: {
-        name: "",
-        enemytips: "",
-        cooldownQ: [],
-        cooldownW: [],
-        cooldownE: [],
-        cooldownR: [],
-      },
-      champ4: {
-        name: "",
-        enemytips: "",
-        cooldownQ: [],
-        cooldownW: [],
-        cooldownE: [],
-        cooldownR: [],
-      },
-      champ5: {
-        name: "",
-        enemytips: "",
-        cooldownQ: [],
-        cooldownW: [],
-        cooldownE: [],
-        cooldownR: [],
-      }
 
+      enemies: {
+        champ1: {
+        name: "",
+        enemytips: "",
+        cooldownQ: [],
+        cooldownW: [],
+        cooldownE: [],
+        cooldownR: [],
+        },
+        champ2: {
+          name: "",
+          enemytips: "",
+          cooldownQ: [],
+          cooldownW: [],
+          cooldownE: [],
+          cooldownR: [],
+        },
+        champ3: {
+          name: "",
+          enemytips: "",
+          cooldownQ: [],
+          cooldownW: [],
+          cooldownE: [],
+          cooldownR: [],
+        },
+        champ4: {
+          name: "",
+          enemytips: "",
+          cooldownQ: [],
+          cooldownW: [],
+          cooldownE: [],
+          cooldownR: [],
+        },
+        champ5: {
+          name: "",
+          enemytips: "",
+          cooldownQ: [],
+          cooldownW: [],
+          cooldownE: [],
+          cooldownR: [],
+        }
+      }
     }
 
 
@@ -83,28 +85,19 @@ class App extends Component {
           const cooldownR = response.data.data[champName].spells[3].cooldown
 
 
-          let updatedSelectedChamp = {...this.state[champId]}
+          let updatedSelectedChamp = {...this.state.enemies}
 
-          updatedSelectedChamp.enemytips = enemyTip
-          updatedSelectedChamp.name = champName
-          updatedSelectedChamp.cooldownQ = cooldownQ
-          updatedSelectedChamp.cooldownW = cooldownW
-          updatedSelectedChamp.cooldownE = cooldownE
-          updatedSelectedChamp.cooldownR = cooldownR
+          updatedSelectedChamp[champId].enemytips = enemyTip
+          updatedSelectedChamp[champId].name = champName
+          updatedSelectedChamp[champId].cooldownQ = cooldownQ
+          updatedSelectedChamp[champId].cooldownW = cooldownW
+          updatedSelectedChamp[champId].cooldownE = cooldownE
+          updatedSelectedChamp[champId].cooldownR = cooldownR
 
-          this.setState({[champId]: updatedSelectedChamp});
+          this.setState({enemies: updatedSelectedChamp});
         });
 
   }
-
-  lookUpChampionData (champ){
-    const url = 'http://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/'+champ+'.json'
-    axios.get(url)
-      .then( response => {
-          const champData = response.data.data
-        });
-  }
-
 
   submitTeam (){
     const doesShow = this.state.showEnemyTeam;
@@ -133,12 +126,7 @@ class App extends Component {
           champSelectorChange={this.champSelectorHandler.bind(this)}
           teamBuilderSubmit={this.submitTeam.bind(this)}
           showEnemy={this.state.showEnemyTeam}
-          enemies={this.state.selectedChamps}
-          champ1={this.state.champ1}
-          champ2={this.state.champ2}
-          champ3={this.state.champ3}
-          champ4={this.state.champ4}
-          champ5={this.state.champ5}
+          enemies={this.state.enemies}
         >
         </Layout>
       </div>
