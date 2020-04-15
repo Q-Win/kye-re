@@ -4,21 +4,21 @@ import Aux from '../../hoc/Aux/Aux';
 // import classes from './TeamBuilder.css'
 import ChampSelector from '../../components/ChampSelector/ChampSelector'
 import Champion from '../../components/Champion/Champion'
-import Modal from '../../components/UI/Modal/Modal'
+// import Modal from '../../components/UI/Modal/Modal'
 
 class TeamBuilder extends Component {
 
   render (){
-    let showEnemy = this.props.showEnemy
+
 
     const whatWeDisplay = () =>{
       if (this.props.showEnemy) { return(
         <div>
-          <Champion champData = {this.props.champ1}/>
-          <Champion champData = {this.props.champ2}/>
-          <Champion champData = {this.props.champ3}/>
-          <Champion champData = {this.props.champ4}/>
-          <Champion champData = {this.props.champ5}/>
+          <Champion champData = {this.props.enemies.champ1}/>
+          <Champion champData = {this.props.enemies.champ2}/>
+          <Champion champData = {this.props.enemies.champ3}/>
+          <Champion champData = {this.props.enemies.champ4}/>
+          <Champion champData = {this.props.enemies.champ5}/>
           <button onClick={this.props.submitClicked}>New Team</button>
         </div>
        )

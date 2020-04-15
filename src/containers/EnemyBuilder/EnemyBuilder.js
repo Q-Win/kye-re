@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+
 import Aux from '../../hoc/Aux/Aux';
 import Enemy from '../../components/Enemy/Enemy'
 
