@@ -70,10 +70,6 @@ class App extends Component {
   champSelectorHandler (event) {
     const champId = event.target.id
     const champName = event.target.value
-    let updatedChamps = {...this.state.selectedChamps}
-    updatedChamps[champId] = champName
-    this.setState({selectedChamps: updatedChamps});
-
     const url = 'https://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion/'+champName+'.json'
 
     axios.get(url)
