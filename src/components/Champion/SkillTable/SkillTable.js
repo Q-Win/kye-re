@@ -9,7 +9,7 @@ class SkillTable extends Component {
     return (
       <table>
         <tr>
-          <th> </th>
+          <th> Q </th>
           {this.props.cooldowns.map((cd, index) =>{
             return(<th>{index+1}</th>)
           })}
