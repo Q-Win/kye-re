@@ -76,9 +76,13 @@ class App extends Component {
       .then( response => {
           const enemyTip = response.data.data[champName].enemytips
           const cooldownQ = response.data.data[champName].spells[0].cooldown
-          const cooldownE = response.data.data[champName].spells[1].cooldown
-          const cooldownW = response.data.data[champName].spells[2].cooldown
+          const descriptionQ = response.data.data[champName].spells[0].description
+          const cooldownW = response.data.data[champName].spells[1].cooldown
+          const descriptionW = response.data.data[champName].spells[1].description
+          const cooldownE = response.data.data[champName].spells[2].cooldown
+          const descriptionE = response.data.data[champName].spells[2].description
           const cooldownR = response.data.data[champName].spells[3].cooldown
+          const descriptionR = response.data.data[champName].spells[3].description
 
 
           let updatedSelectedChamp = {...this.state.enemies}
@@ -86,9 +90,13 @@ class App extends Component {
           updatedSelectedChamp[champId].enemytips = enemyTip
           updatedSelectedChamp[champId].name = champName
           updatedSelectedChamp[champId].cooldownQ = cooldownQ
+          updatedSelectedChamp[champId].descriptionQ = descriptionQ
           updatedSelectedChamp[champId].cooldownW = cooldownW
+          updatedSelectedChamp[champId].descriptionW = descriptionW
           updatedSelectedChamp[champId].cooldownE = cooldownE
+          updatedSelectedChamp[champId].descriptionE = descriptionE
           updatedSelectedChamp[champId].cooldownR = cooldownR
+          updatedSelectedChamp[champId].descriptionR = descriptionR
 
           this.setState({enemies: updatedSelectedChamp});
         });
