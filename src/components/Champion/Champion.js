@@ -8,6 +8,15 @@ const champion = (props) => (
     <SkillTable
       cooldowns = {props.champData.cooldownQ}
       description = {props.champData.descriptionQ}/>
+    <SkillTable
+      cooldowns = {props.champData.cooldownW}
+      description = {props.champData.descriptionW}/>
+    <SkillTable
+      cooldowns = {props.champData.cooldownE}
+      description = {props.champData.descriptionE}/>
+    <SkillTable
+      cooldowns = {props.champData.cooldownR}
+      description = {props.champData.descriptionR}/>
   </div>
 );
 
